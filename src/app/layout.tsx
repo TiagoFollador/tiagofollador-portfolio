@@ -4,6 +4,7 @@ import './globals.css'
 import { LocaleProvider } from '@/context/LocaleContext'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { MainWrapper } from '@/components/layout/MainWrapper'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
@@ -40,7 +41,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-slate-950 antialiased">
         <LocaleProvider>
           <Header />
-          <main>{children}</main>
+          <MainWrapper>{children}</MainWrapper>
           <Footer />
         </LocaleProvider>
       </body>
