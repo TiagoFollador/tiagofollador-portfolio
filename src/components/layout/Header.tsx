@@ -9,7 +9,7 @@ import { profile } from '@/data/profile'
 const NAV_SECTIONS = ['about', 'experience', 'projects', 'skills', 'resume', 'contact'] as const
 
 export function Header() {
-  const { locale, setLocale } = useLocale()
+  const { locale, switchLocale } = useLocale()
   const t = content[locale].nav
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
@@ -63,7 +63,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           {/* Language toggle */}
           <button
-            onClick={() => setLocale(locale === 'en' ? 'pt' : 'en')}
+            onClick={() => switchLocale(locale === 'en' ? 'pt' : 'en')}
             aria-label="Toggle language"
             className="flex items-center gap-1.5 font-mono text-xs border border-slate-700 rounded px-2.5 py-1 text-slate-400 hover:text-slate-100 hover:border-slate-500 transition-colors"
           >
