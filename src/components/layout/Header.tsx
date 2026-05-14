@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { Menu, X, Globe } from 'lucide-react'
 import { useLocale } from '@/context/LocaleContext'
 import { content } from '@/data/content'
@@ -43,20 +44,21 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-md">
       <div className="max-w-4xl mx-auto px-4 md:px-8 h-14 flex items-center justify-between">
-        <a href="#hero" className="font-mono text-sm text-slate-300 hover:text-white transition-colors">
+        <Link href="#hero" className="font-mono text-sm text-slate-300 hover:text-white transition-colors">
           {profile.name}
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm text-slate-400">
           {navLinks.map(([href, label, sectionId]) => (
-            <a
+            <Link
               key={href}
               href={href}
+              aria-current={activeSection === sectionId ? 'location' : undefined}
               className={`hover:text-slate-100 transition-colors ${activeSection === sectionId ? 'text-cyan-400' : ''}`}
             >
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -90,9 +92,10 @@ export function Header() {
       >
         <nav className="flex flex-col px-4 py-3 bg-slate-950/95 gap-1">
           {navLinks.map(([href, label, sectionId]) => (
-            <a
+            <Link
               key={href}
               href={href}
+              aria-current={activeSection === sectionId ? 'location' : undefined}
               onClick={() => setMobileOpen(false)}
               className={`py-2.5 text-sm border-b border-slate-800/40 last:border-0 transition-colors ${
                 activeSection === sectionId
@@ -101,7 +104,7 @@ export function Header() {
               }`}
             >
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

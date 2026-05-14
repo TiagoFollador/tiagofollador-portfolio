@@ -20,8 +20,7 @@ export function ResumeSection() {
         </div>
         <a
           href={profile.cv}
-          target="_blank"
-          rel="noopener noreferrer"
+          download="Tiago-Follador-CV.pdf"
           className="inline-flex items-center gap-2 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-medium px-6 py-3 transition-colors shrink-0"
         >
           <Download size={16} />
