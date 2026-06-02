@@ -1,3 +1,4 @@
+import { ExternalLink as ExternalLinkIcon } from 'lucide-react'
 import { Project } from '@/data/projects'
 import { Audience } from '@/context/AudienceContext'
 import { Badge } from '@/components/ui/badge'
@@ -11,6 +12,7 @@ interface ProjectCardLabels {
   caseAngle: string
   metrics: string
   code: string
+  visit: string
   caseStudy: { problem: string; approach: string; result: string }
 }
 
@@ -31,6 +33,16 @@ export function ProjectCard({ project, audience, labels }: ProjectCardProps) {
           <p className="text-sm text-neutral-400 mt-1 max-w-xl">{project.businessHeadline}</p>
         </div>
         <div className="flex items-center gap-2 shrink-0">
+          {project.url && (
+            <ExternalLink
+              href={project.url}
+              aria-label={`${project.name} — ${labels.visit}`}
+              className="inline-flex items-center gap-1.5 rounded-lg bg-brand-strong hover:bg-brand text-white text-xs font-medium px-2.5 py-1.5 transition-colors"
+            >
+              <ExternalLinkIcon size={12} />
+              {labels.visit}
+            </ExternalLink>
+          )}
           {project.repo && (
             <ExternalLink
               href={project.repo}

@@ -35,6 +35,7 @@ export interface SiteContent {
     sideLabel: string
     metricsLabel: string
     codeLabel: string
+    visitLabel: string
     caseStudyLabels: { problem: string; approach: string; result: string }
   }
   skills: {
@@ -132,6 +133,7 @@ export const content: Record<Locale, SiteContent> = {
       sideLabel: 'Personal Project / Open Source Experiment',
       metricsLabel: 'By the numbers',
       codeLabel: 'Code',
+      visitLabel: 'Visit site',
       caseStudyLabels: { problem: 'Problem', approach: 'Approach', result: 'Result' },
     },
     skills: {
@@ -249,6 +251,7 @@ export const content: Record<Locale, SiteContent> = {
       sideLabel: 'Projeto Pessoal / Experimento Open Source',
       metricsLabel: 'Em números',
       codeLabel: 'Código',
+      visitLabel: 'Visitar site',
       caseStudyLabels: { problem: 'Problema', approach: 'Abordagem', result: 'Resultado' },
     },
     skills: {

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import { LocaleProvider } from '@/context/LocaleContext'
 import { AudienceProvider } from '@/context/AudienceContext'
@@ -51,6 +52,12 @@ export const metadata: Metadata = {
     description: 'Building production-grade APIs, integrations, and web systems.',
   },
   robots: { index: true, follow: true },
+  alternates: {
+    languages: {
+      'en': 'https://tiagofollador.com',
+      'pt-BR': 'https://tiagofollador.com',
+    },
+  },
 }
 
 export default function RootLayout({
@@ -73,6 +80,7 @@ export default function RootLayout({
             <Footer />
           </AudienceProvider>
         </LocaleProvider>
+        <Analytics />
       </body>
     </html>
   )

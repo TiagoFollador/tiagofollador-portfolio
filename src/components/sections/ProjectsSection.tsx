@@ -21,6 +21,7 @@ export function ProjectsSection() {
     caseAngle: t.caseAngleLabel,
     metrics: t.metricsLabel,
     code: t.codeLabel,
+    visit: t.visitLabel,
     caseStudy: t.caseStudyLabels,
   }
 

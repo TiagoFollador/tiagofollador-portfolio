@@ -10,6 +10,7 @@ export interface Project {
   caseAngle: string
   stack: string[]
   label?: string
+  url?: string
   repo?: string
   metrics?: string[]
   caseStudy?: {
@@ -38,6 +39,7 @@ export const projects: Record<Locale, Project[]> = {
         'Long conversations load without lag, support flows stay responsive under daily use, and every interaction stays searchable and auditable for the teams that depend on it.',
       caseAngle:
         'From stacked message loading to reference-based pagination: reducing frontend load and improving long conversation navigation.',
+      url: 'https://www.flowly.com.br/',
       stack: ['NestJS', 'TypeScript', 'React Router', 'TypeORM', 'MySQL', 'PostgreSQL', 'WebSockets', 'Docker', 'Baileys'],
       caseStudy: {
         problem:
@@ -66,7 +68,16 @@ export const projects: Record<Locale, Project[]> = {
         'Warehouse events stay consistent across services, and product and history flows keep working correctly as the operation scales.',
       caseAngle:
         'GraphQL federation in warehouse systems: handling polymorphic relationships across multiple services.',
+      url: 'https://www.flashwms.com.br/',
       stack: ['TypeScript', 'GraphQL', 'Apollo Router', 'Prisma', 'PostgreSQL', 'React Router', 'Pub/Sub', 'Microservices'],
+      caseStudy: {
+        problem:
+          'The history/event service was receiving messages it shouldn\'t own — multiple services consumed the same Pub/Sub topic, causing duplicate records and inconsistent audit trails across warehouse operations.',
+        approach:
+          'Refactored the event routing so each service owns only its relevant message types. Introduced polymorphic federated relationships via Apollo Router, letting the GraphQL layer resolve entities across services without tight coupling between them.',
+        result:
+          'Warehouse events land in exactly one service, history records are consistent, and adding new operation types no longer risks contaminating existing audit flows.',
+      },
     },
     {
       id: 'whatsapp-api',
@@ -104,6 +115,7 @@ export const projects: Record<Locale, Project[]> = {
         'Conversas longas carregam sem travar, os fluxos de suporte continuam responsivos no uso diário e cada interação permanece pesquisável e auditável para os times que dependem dela.',
       caseAngle:
         'De carregamento empilhado a paginação baseada em referência: reduzindo a carga no frontend e melhorando a navegação em históricos longos.',
+      url: 'https://www.flowly.com.br/',
       stack: ['NestJS', 'TypeScript', 'React Router', 'TypeORM', 'MySQL', 'PostgreSQL', 'WebSockets', 'Docker', 'Baileys'],
       caseStudy: {
         problem:
@@ -132,7 +144,16 @@ export const projects: Record<Locale, Project[]> = {
         'Os eventos do armazém permanecem consistentes entre os serviços, e os fluxos de produtos e histórico continuam funcionando corretamente conforme a operação cresce.',
       caseAngle:
         'Federação GraphQL em sistemas de armazém: tratando relacionamentos polimórficos entre múltiplos serviços.',
+      url: 'https://www.flashwms.com.br/',
       stack: ['TypeScript', 'GraphQL', 'Apollo Router', 'Prisma', 'PostgreSQL', 'React Router', 'Pub/Sub', 'Microservices'],
+      caseStudy: {
+        problem:
+          'O serviço de histórico/eventos recebia mensagens que não eram de sua responsabilidade — vários serviços consumiam o mesmo tópico Pub/Sub, gerando registros duplicados e trilhas de auditoria inconsistentes nas operações do armazém.',
+        approach:
+          'Refatorei o roteamento de eventos para que cada serviço consuma apenas os tipos de mensagem que lhe pertencem. Introduzi relacionamentos federados polimórficos via Apollo Router, permitindo que a camada GraphQL resolva entidades entre serviços sem acoplamento direto.',
+        result:
+          'Os eventos do armazém chegam em exatamente um serviço, os registros de histórico são consistentes e adicionar novos tipos de operação não arrisca mais contaminar os fluxos de auditoria existentes.',
+      },
     },
     {
       id: 'whatsapp-api',
