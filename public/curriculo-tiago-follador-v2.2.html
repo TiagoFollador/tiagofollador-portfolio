@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Currículo - Tiago de Brito Follador</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 13mm 14mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: #111827;
+        background: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10.4pt;
+        line-height: 1.38;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 23pt;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-top: 14px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #111827;
+        font-size: 10.8pt;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        font-size: 10.8pt;
+      }
+
+      a {
+        color: #0f4c81;
+        text-decoration: none;
+      }
+
+      ul {
+        margin: 5px 0 0 0;
+        padding-left: 16px;
+      }
+
+      li {
+        margin: 2px 0;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        border-bottom: 2px solid #111827;
+        padding-bottom: 9px;
+      }
+
+      .title {
+        display: grid;
+        gap: 4px;
+      }
+
+      .role {
+        color: #374151;
+        font-size: 11.2pt;
+        font-weight: 700;
+      }
+
+      .contact {
+        min-width: 235px;
+        color: #374151;
+        font-size: 9.6pt;
+        line-height: 1.34;
+        text-align: right;
+        overflow-wrap: anywhere;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+
+      .item {
+        margin-top: 8px;
+        page-break-inside: avoid;
+      }
+
+      .item-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .meta {
+        color: #4b5563;
+        font-size: 9.4pt;
+        white-space: nowrap;
+      }
+
+      .submeta {
+        margin-top: 1px;
+        color: #4b5563;
+        font-size: 9.6pt;
+        font-weight: 700;
+      }
+
+      .stack {
+        margin-top: 4px;
+        color: #374151;
+        font-size: 9.7pt;
+      }
+
+      .compact {
+        margin-top: 5px;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px 18px;
+        margin-top: 6px;
+      }
+
+      .skill-row strong {
+        color: #111827;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="title">
+        <h1>Tiago de Brito Follador</h1>
+        <p class="role">Desenvolvedor Full Stack</p>
+        <p>Curitiba, Paraná, Brasil</p>
+      </div>
+      <div class="contact">
+        <p>(41) 99680-5558</p>
+        <p><a href="mailto:tiagofollador97@gmail.com">tiagofollador97@gmail.com</a></p>
+        <p><a href="https://tiagofollador.com">tiagofollador.com</a></p>
+        <p><a href="https://github.com/TiagoFollador">github.com/TiagoFollador</a></p>
+        <p><a href="https://www.linkedin.com/in/tiago-de-brito-follador-30313126a/">linkedin.com/in/tiago-de-brito-follador-30313126a</a></p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2>Resumo profissional</h2>
+        <p class="compact">
+          Desenvolvedor Full Stack com experiência desde julho de 2024 em aplicações web de logística,
+          comunicação, mensagens e operações internas. Atuo com React, TypeScript, NestJS, Laravel/PHP,
+          APIs REST, GraphQL, MySQL e PostgreSQL, com foco em performance, integrações, processamento
+          assíncrono e manutenção de sistemas em produção.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Competências técnicas</h2>
+        <div class="skills-grid">
+          <p class="skill-row"><strong>Linguagens:</strong> TypeScript, JavaScript, PHP, Python, Java</p>
+          <p class="skill-row"><strong>Backend:</strong> NestJS, Node.js, Laravel, Flask, REST APIs, GraphQL</p>
+          <p class="skill-row"><strong>Frontend:</strong> React, Next.js, React Router, Tailwind CSS</p>
+          <p class="skill-row"><strong>Dados:</strong> PostgreSQL, MySQL, SQL, Prisma, TypeORM</p>
+          <p class="skill-row"><strong>Integrações:</strong> WebSockets, Webhooks, WhatsApp APIs, IMAP/e-mail, Pub/Sub</p>
+          <p class="skill-row"><strong>Ferramentas:</strong> Git, GitHub, Docker, cron jobs, testes automatizados</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Experiência profissional</h2>
+        <article class="item">
+          <div class="item-head">
+            <div>
+              <h3>Nexance, prestando serviços para AIQIA</h3>
+              <p class="submeta">Desenvolvedor Full Stack</p>
+            </div>
+            <p class="meta">Julho 2024 - Atual</p>
+          </div>
+          <ul>
+            <li>Desenvolvo e mantenho funcionalidades centrais para plataformas web de logística, comunicação, tickets e operações internas, atuando em frontend, backend, integrações e evolução de sistemas em produção.</li>
+            <li>Contribuí para melhorias de performance em APIs e fluxos de mensagens, reduzindo consultas repetidas, agrupando dados antes do acesso ao banco e otimizando carregamento de históricos longos.</li>
+            <li>Implementei busca e paginação de mensagens com consultas otimizadas e carregamento por referência, melhorando a navegação em conversas extensas.</li>
+            <li>Trabalhei com integrações de WhatsApp e e-mail, incluindo processamento de webhooks, leitura via IMAP, fluxos Google/Azure e processamento assíncrono.</li>
+            <li>Contribuí para fluxos de WMS em arquitetura orientada a microsserviços com GraphQL federation, Apollo Router, Prisma, PostgreSQL e Pub/Sub.</li>
+            <li>Implementei testes unitários e de integração em APIs, colaborando para maior cobertura e menor incidência de bugs em produção.</li>
+            <li>Participei de cerimônias Scrum, revisões técnicas e manutenção contínua de funcionalidades críticas para operações de transporte e armazenagem.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Projetos relevantes</h2>
+        <article class="item">
+          <div class="item-head">
+            <h3>Flowly - Plataforma de mensagens e tickets</h3>
+            <p class="meta">Projeto profissional privado</p>
+          </div>
+          <p class="stack"><strong>Stack:</strong> NestJS, React, React Router, TypeScript, TypeORM, MySQL, PostgreSQL, WebSockets, Docker</p>
+          <ul>
+            <li>Atuei na manutenção e evolução da plataforma durante a transição da v1 para v2.</li>
+            <li>Auxiliei na arquitetura e desenvolvimento da API para mensagens em tempo real usando NestJS e WebSockets.</li>
+            <li>Implementei busca, paginação por referência e melhorias de carregamento para históricos longos de mensagens.</li>
+            <li>Contribuí com fluxos de WhatsApp, e-mail, IMAP, webhooks e integrações externas de comunicação.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-head">
+          <h3>WMS - Sistema de gerenciamento de armazém</h3>
+            <p class="meta">Projeto profissional privado</p>
+          </div>
+          <p class="stack"><strong>Stack:</strong> TypeScript, GraphQL, Apollo Router, Prisma, PostgreSQL, React Router, Pub/Sub, microsserviços</p>
+          <ul>
+            <li>Contribuí para fluxos de cadastro de produtos, histórico/eventos e operações logísticas em arquitetura federada.</li>
+            <li>Trabalhei em refatorações de consumo de eventos e relacionamentos federados entre múltiplas entidades.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Formação acadêmica</h2>
+        <article class="item">
+          <div class="item-head">
+            <h3>Bacharelado em Ciência da Computação - PUC-PR</h3>
+            <p class="meta">Previsão de conclusão: 2026</p>
+          </div>
+          <p class="compact">Curso em andamento.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Certificações</h2>
+        <ul class="compact">
+          <li>Formação Laravel: crie aplicações web em PHP - Alura, 2024</li>
+          <li>Formação Aprenda a programar em PHP com Orientação a Objetos - Alura, 2024</li>
+          <li>Formação Aprofunde em PHP com programação funcional, assíncrona e metaprogramação - Alura, 2024</li>
+          <li>Formação Aprofunde em PHP com Persistência Poliglota - Alura, 2024</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Idiomas</h2>
+        <p class="compact"><strong>Português:</strong> Nativo | <strong>Inglês:</strong> Intermediário alto (Cambridge B1 First, pontuação 146, 2022)</p>
+      </section>
+    </main>
+  </body>
+</html>

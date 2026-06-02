@@ -6,5 +6,7 @@ export const profile = {
   github: 'https://github.com/TiagoFollador',
   linkedin: 'https://www.linkedin.com/in/tiago-de-brito-follador-30313126a/',
   domain: 'https://tiagofollador.com',
-  cv: '/cv-tiago-follador.pdf',
+  cv: '/curriculo-tiago-follador-v2.2.pdf',
+  // Place your photo at /public/foto-tiago.jpg (any format; update the path below to match).
+  photo: '/foto-tiago.jpg',
 } as const

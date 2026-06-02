@@ -36,8 +36,8 @@ export function Section({ id, children, className }: SectionProps) {
 
 export function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h2 className="text-2xl font-bold text-slate-100 mb-10 flex items-center gap-3">
-      <span className="text-cyan-400 font-mono text-lg select-none">{'#'}</span>
+    <h2 className="text-2xl font-bold text-neutral-100 mb-10 flex items-center gap-3">
+      <span className="text-brand font-mono text-lg select-none">{'#'}</span>
       {children}
     </h2>
   )

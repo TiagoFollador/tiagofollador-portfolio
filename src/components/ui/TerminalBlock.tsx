@@ -1,16 +1,20 @@
 interface TerminalBlockProps {
-  title: string
+  lines: string[]
 }
 
-export function TerminalBlock({ title }: TerminalBlockProps) {
+export function TerminalBlock({ lines }: TerminalBlockProps) {
   return (
-    <div className="inline-block rounded-lg border border-slate-700 bg-slate-900 px-5 py-3 font-mono text-sm text-left">
-      <span className="text-slate-500">$ </span>
-      <span className="text-cyan-400">whoami</span>
-      <br />
-      <span className="text-slate-400"># </span>
-      <span className="text-slate-200">Tiago Follador</span>
-      <span className="text-slate-500"> — {title}</span>
+    <div className="inline-block rounded-lg border border-neutral-700 bg-neutral-900 px-5 py-3 font-mono text-sm text-left">
+      <div>
+        <span className="text-neutral-500">$ </span>
+        <span className="text-brand">whoami</span>
+      </div>
+      {lines.map((line, i) => (
+        <div key={i}>
+          <span className="text-brand">{'> '}</span>
+          <span className="text-neutral-300">{line}</span>
+        </div>
+      ))}
     </div>
   )
 }
