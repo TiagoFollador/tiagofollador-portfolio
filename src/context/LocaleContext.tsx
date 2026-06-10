@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 import { Locale } from '@/data/content'
 
 interface LocaleContextValue {
@@ -23,8 +23,13 @@ function detectLocale(): Locale {
 }
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<Locale>(detectLocale)
+  const [locale, setLocale] = useState<Locale>('en')
   const [isTransitioning, setIsTransitioning] = useState(false)
+
+  useEffect(() => {
+    const detected = detectLocale()
+    if (detected !== 'en') setLocale(detected)
+  }, [])
 
   function switchLocale(newLocale: Locale) {
     setIsTransitioning(true)

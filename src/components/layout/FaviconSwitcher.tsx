@@ -20,9 +20,12 @@ export function FaviconSwitcher() {
   const { audience } = useAudience()
 
   useEffect(() => {
-    let link = document.querySelector<HTMLLinkElement>('link[rel="icon"][type="image/svg+xml"]')
+    // Use a dedicated element (by ID) so React's head reconciler never restores
+    // the original static href from app/icon.svg over our mutation.
+    let link = document.getElementById('favicon-dynamic') as HTMLLinkElement | null
     if (!link) {
       link = document.createElement('link')
+      link.id = 'favicon-dynamic'
       link.rel = 'icon'
       link.type = 'image/svg+xml'
       document.head.appendChild(link)
