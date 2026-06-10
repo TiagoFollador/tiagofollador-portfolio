@@ -8,6 +8,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { MainWrapper } from '@/components/layout/MainWrapper'
 import { AudienceTheme } from '@/components/layout/AudienceTheme'
+import { FaviconSwitcher } from '@/components/layout/FaviconSwitcher'
 import { profile } from '@/data/profile'
 
 const personJsonLd = {
@@ -75,6 +76,7 @@ export default function RootLayout({
         <LocaleProvider>
           <AudienceProvider>
             <AudienceTheme />
+            <FaviconSwitcher />
             <Header />
             <MainWrapper>{children}</MainWrapper>
             <Footer />

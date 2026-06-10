@@ -10,7 +10,7 @@ interface AudienceContextValue {
 }
 
 const AudienceContext = createContext<AudienceContextValue>({
-  audience: 'devs',
+  audience: 'leaders',
   setAudience: () => {},
 })
 
